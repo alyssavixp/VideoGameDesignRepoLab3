@@ -9,8 +9,8 @@
 script = ExtResource("1_jty7k")
 
 [node name="Pngtree-road-road-cartoon-illustration-image2286698" type="Sprite2D" parent="."]
-position = Vector2(573, 320)
-scale = Vector2(3.18611, 1.81111)
+position = Vector2(574, 331)
+scale = Vector2(3.18611, 1.81389)
 texture = ExtResource("2_m1tsh")
 
 [node name="redcar" parent="." instance=ExtResource("2_rntyr")]
