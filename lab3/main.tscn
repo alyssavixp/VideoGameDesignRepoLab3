@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf7go7spjgvsa"]
+[gd_scene load_steps=5 format=3 uid="uid://bf7go7spjgvsa"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_jty7k"]
+[ext_resource type="Texture2D" uid="uid://d162qyotxisrx" path="res://pngtree-road-road-cartoon-illustration-image_2286698.jpg" id="2_m1tsh"]
 [ext_resource type="PackedScene" uid="uid://db8tgi1hpxfga" path="res://redcar.tscn" id="2_rntyr"]
 [ext_resource type="PackedScene" uid="uid://dkjpr0304d2jl" path="res://roadblock.tscn" id="3_yr3nr"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jty7k")
+
+[node name="Pngtree-road-road-cartoon-illustration-image2286698" type="Sprite2D" parent="."]
+position = Vector2(573, 320)
+scale = Vector2(3.18611, 1.81111)
+texture = ExtResource("2_m1tsh")
 
 [node name="redcar" parent="." instance=ExtResource("2_rntyr")]
 position = Vector2(-808, -113)
