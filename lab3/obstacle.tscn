@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnne0op3fde0b"]
+
+[ext_resource type="Script" path="res://obstacle.gd" id="1_rxh0d"]
+[ext_resource type="Texture2D" uid="uid://bj4mrxyjip2ik" path="res://alyssa/png/car/9.png" id="2_74h0k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr22m"]
+radius = 192.416
+
+[node name="Obstacle" type="Node2D"]
+script = ExtResource("1_rxh0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="9" type="Sprite2D" parent="."]
+position = Vector2(-2.00006, 5)
+scale = Vector2(12.5, 13.6957)
+texture = ExtResource("2_74h0k")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dr22m")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

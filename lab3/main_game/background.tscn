@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dll4vhh4ymk3s"]
 
-[ext_resource type="Texture2D" uid="uid://dunjh3n0173du" path="res://background/parallax_background_layer_1.png" id="1_uvxko"]
-[ext_resource type="Texture2D" uid="uid://de70dhn53i08p" path="res://background/parallax_background_layer_2.png" id="2_anca2"]
+[ext_resource type="Texture2D" uid="uid://dunjh3n0173du" path="res://alyssa/background/parallax_background_layer_1.png" id="1_uvxko"]
+[ext_resource type="Texture2D" uid="uid://de70dhn53i08p" path="res://alyssa/background/parallax_background_layer_2.png" id="2_anca2"]
 
 [sub_resource type="GDScript" id="GDScript_k1qal"]
 resource_name = "background"
