@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dll4vhh4ymk3s"]
+
+[ext_resource type="Texture2D" uid="uid://dunjh3n0173du" path="res://background/parallax_background_layer_1.png" id="1_uvxko"]
+[ext_resource type="Texture2D" uid="uid://de70dhn53i08p" path="res://background/parallax_background_layer_2.png" id="2_anca2"]
+
+[sub_resource type="GDScript" id="GDScript_k1qal"]
+resource_name = "background"
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore(\"unused_parameter\")
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_k1qal")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+z_index = 1
+scroll_offset = Vector2(57, 62)
+
+[node name="ParallaxBackgroundLayer1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(521, 259.5)
+scale = Vector2(2.24219, 2.21181)
+texture = ExtResource("1_uvxko")
+
+[node name="ParallaxBackgroundLayer2" type="Sprite2D" parent="Parallax2D"]
+z_index = 4
+position = Vector2(623, 259)
+scale = Vector2(2.36719, 2.42535)
+texture = ExtResource("2_anca2")

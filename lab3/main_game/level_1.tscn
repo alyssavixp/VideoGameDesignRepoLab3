@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://mxnw55fykfjx"]
+
+[ext_resource type="Script" path="res://main_game/level_1.gd" id="1_814jb"]
+[ext_resource type="PackedScene" uid="uid://dwak501xauj6g" path="res://main_game/parallax.tscn" id="2_cbnhb"]
+[ext_resource type="PackedScene" uid="uid://u3fb0sni1m6c" path="res://main_game/level_set.tscn" id="3_vliht"]
+[ext_resource type="PackedScene" uid="uid://cyggoav6ddt1w" path="res://main_game/player_1.tscn" id="4_55enj"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r5ytj"]
+distance = -30.0
+
+[node name="Level 1" type="Node2D"]
+position = Vector2(-229, 425)
+script = ExtResource("1_814jb")
+
+[node name="Parallax" parent="." instance=ExtResource("2_cbnhb")]
+position = Vector2(2008, -515)
+
+[node name="Set" parent="." instance=ExtResource("3_vliht")]
+position = Vector2(270, -147)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(424, 97)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(21, 37)
+scale = Vector2(2, 2)
+shape = SubResource("WorldBoundaryShape2D_r5ytj")
+one_way_collision_margin = 5.1
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(827, -326)
+color = Color(0.55, 0.517, 0.51755, 1)
+
+[node name="player1" parent="." instance=ExtResource("4_55enj")]
+position = Vector2(111, 656)
+
+[node name="Camera2D" type="Camera2D" parent="player1"]
+position = Vector2(948, -662)
+limit_smoothed = true

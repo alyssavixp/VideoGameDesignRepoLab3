@@ -1,0 +1,251 @@
+[gd_scene load_steps=26 format=3 uid="uid://cyggoav6ddt1w"]
+
+[ext_resource type="Script" path="res://main_game/player_1.gd" id="1_6bxs6"]
+[ext_resource type="Texture2D" uid="uid://cwo6lh21vft3x" path="res://alyssa/png/car/car1.png" id="2_4r7f7"]
+[ext_resource type="Texture2D" uid="uid://hbwe71jtbbm6" path="res://alyssa/png/animated/1_2.png" id="3_1qlbc"]
+[ext_resource type="Texture2D" uid="uid://ne1udolcr285" path="res://alyssa/png/animated/1.png" id="4_s30n3"]
+[ext_resource type="Texture2D" uid="uid://bj4mrxyjip2ik" path="res://alyssa/png/car/9.png" id="5_w58gn"]
+[ext_resource type="Texture2D" uid="uid://csbfjjfi60ngm" path="res://alyssa/png/car/6.png" id="6_8jmni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a78j4"]
+size = Vector2(257.125, 71.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouexc"]
+atlas = ExtResource("3_1qlbc")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n8ne"]
+atlas = ExtResource("3_1qlbc")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl72p"]
+atlas = ExtResource("3_1qlbc")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qsjy"]
+atlas = ExtResource("3_1qlbc")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ql40x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouexc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n8ne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl72p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qsjy")
+}],
+"loop": true,
+"name": &"wheels",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ifc78"]
+radius = 6.15384
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yii3h"]
+atlas = ExtResource("4_s30n3")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on1sl"]
+atlas = ExtResource("4_s30n3")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prit0"]
+atlas = ExtResource("4_s30n3")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_153v0"]
+atlas = ExtResource("4_s30n3")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xfnw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yii3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on1sl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prit0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_153v0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cbs4o"]
+
+[sub_resource type="Gradient" id="Gradient_yimhm"]
+offsets = PackedFloat32Array(0, 0.698925)
+colors = PackedColorArray(0.74, 0.61235, 0.407, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0l13j"]
+gradient = SubResource("Gradient_yimhm")
+width = 103
+height = 102
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_bs5r7"]
+offsets = PackedFloat32Array(0, 0.698925)
+colors = PackedColorArray(0.74, 0.61235, 0.407, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i3ath"]
+gradient = SubResource("Gradient_bs5r7")
+width = 103
+height = 102
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_stft8"]
+offsets = PackedFloat32Array(0, 0.698925)
+colors = PackedColorArray(0.74, 0.61235, 0.407, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o0ceg"]
+gradient = SubResource("Gradient_stft8")
+width = 103
+height = 102
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[node name="player1" type="CharacterBody2D"]
+top_level = true
+position = Vector2(87, 606)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_6bxs6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(143.438, -92.25)
+shape = SubResource("RectangleShape2D_a78j4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(90, -60)
+scale = Vector2(3.41667, 3.17708)
+sprite_frames = SubResource("SpriteFrames_ql40x")
+animation = &"wheels"
+autoplay = "wheels"
+frame = 1
+frame_progress = 0.897973
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+visible = false
+position = Vector2(-0.307692, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+visible = false
+position = Vector2(-0.307692, 0)
+shape = SubResource("CircleShape2D_ifc78")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(230, -57.9999)
+scale = Vector2(3.33333, 2.80208)
+sprite_frames = SubResource("SpriteFrames_ql40x")
+animation = &"wheels"
+autoplay = "wheels"
+frame_progress = 0.890566
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D2"]
+visible = false
+position = Vector2(-0.307692, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2D"]
+visible = false
+position = Vector2(-0.307692, 0)
+shape = SubResource("CircleShape2D_ifc78")
+
+[node name="Car1" type="Sprite2D" parent="."]
+position = Vector2(143.5, -96)
+scale = Vector2(2.85556, 2.85714)
+texture = ExtResource("2_4r7f7")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(34, -60)
+scale = Vector2(4.19792, 3.38541)
+sprite_frames = SubResource("SpriteFrames_7xfnw")
+autoplay = "default"
+frame = 2
+frame_progress = 0.567319
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D3"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_cbs4o")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(154, -60)
+scale = Vector2(4.19792, 3.38541)
+sprite_frames = SubResource("SpriteFrames_7xfnw")
+autoplay = "default"
+frame = 2
+frame_progress = 0.567319
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D4"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_cbs4o")
+
+[node name="left_headlight" type="PointLight2D" parent="."]
+show_behind_parent = true
+position = Vector2(202, -88)
+scale = Vector2(0.0948736, 0.0447087)
+color = Color(0.92, 0.83996, 0.3864, 0.682353)
+energy = 2.32
+texture = SubResource("GradientTexture2D_0l13j")
+texture_scale = 3.07
+
+[node name="flood_light" type="PointLight2D" parent="."]
+show_behind_parent = true
+position = Vector2(650, -73)
+scale = Vector2(2.90946, 0.555662)
+color = Color(0.6532, 0.74658, 0.92, 0.682353)
+energy = 3.49
+texture = SubResource("GradientTexture2D_i3ath")
+texture_scale = 3.07
+
+[node name="tail_light" type="PointLight2D" parent="."]
+show_behind_parent = true
+position = Vector2(-85.4801, -82.0001)
+scale = Vector2(0.62313, 0.268251)
+color = Color(0.78, 0.00779999, 0.00779999, 0.682353)
+energy = 3.7
+texture = SubResource("GradientTexture2D_i3ath")
+texture_scale = 3.07
+
+[node name="right_headlight" type="PointLight2D" parent="."]
+show_behind_parent = true
+position = Vector2(263, -87)
+scale = Vector2(0.0399022, 0.0230013)
+color = Color(0.921569, 0.819608, 0.247059, 0.682353)
+energy = 1.51
+texture = SubResource("GradientTexture2D_o0ceg")
+texture_scale = 3.07
+
+[node name="9" type="Sprite2D" parent="."]
+position = Vector2(112, -90)
+scale = Vector2(1.6413, 1.16304)
+texture = ExtResource("5_w58gn")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(110.25, -89)
+scale = Vector2(3.25, 2.75)
+texture = ExtResource("6_8jmni")

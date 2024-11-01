@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwak501xauj6g"]
+
+[ext_resource type="Texture2D" uid="uid://dunjh3n0173du" path="res://alyssa/background/parallax_background_layer_1.png" id="1_t1abt"]
+[ext_resource type="Texture2D" uid="uid://de70dhn53i08p" path="res://alyssa/background/parallax_background_layer_2.png" id="2_tfg1b"]
+[ext_resource type="Texture2D" uid="uid://c5uys65etloag" path="res://alyssa/background/parallax_background_layer_3.png" id="3_ld800"]
+[ext_resource type="Texture2D" uid="uid://b3p4oj86rikec" path="res://alyssa/background/parallax_background_layer_4.png" id="4_rfqar"]
+[ext_resource type="Texture2D" uid="uid://dn6idfien1hmi" path="res://alyssa/background/parallax_background_layer_5.png" id="5_40kgv"]
+
+[node name="Parallax" type="Node2D"]
+position = Vector2(-20, -12)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(1150, 30)
+repeat_times = 8
+
+[node name="ParallaxBackgroundLayer1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(520, 260)
+scale = Vector2(2.4043, 2.45875)
+texture = ExtResource("1_t1abt")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+repeat_size = Vector2(1191, 0)
+repeat_times = 8
+
+[node name="ParallaxBackgroundLayer2" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(658, 349)
+scale = Vector2(2.32913, 2.14046)
+texture = ExtResource("2_tfg1b")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.1, 1.1)
+scroll_offset = Vector2(0, 16)
+repeat_size = Vector2(1173, 0)
+repeat_times = 8
+
+[node name="ParallaxBackgroundLayer3" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(634, 415)
+scale = Vector2(2.37109, 2.23937)
+texture = ExtResource("3_ld800")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.2, 1.2)
+scroll_offset = Vector2(-721, 447)
+repeat_size = Vector2(1195, 0)
+repeat_times = 8
+
+[node name="ParallaxBackgroundLayer4" type="Sprite2D" parent="Parallax2D4"]
+position = Vector2(1401.5, -61)
+scale = Vector2(2.34253, 1.95218)
+texture = ExtResource("4_rfqar")
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.3, 1.3)
+scroll_offset = Vector2(-1321, 272)
+repeat_size = Vector2(1325, 0)
+repeat_times = 7
+
+[node name="ParallaxBackgroundLayer5" type="Sprite2D" parent="Parallax2D5"]
+position = Vector2(2023, 136)
+scale = Vector2(2.60886, 2.529)
+texture = ExtResource("5_40kgv")
