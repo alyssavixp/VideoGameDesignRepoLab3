@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lab3"
-run/main_scene="res://main_game/level_1.tscn"
+run/main_scene="res://main_menu/mainmenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://z_archive_files/icon.svg"
 
