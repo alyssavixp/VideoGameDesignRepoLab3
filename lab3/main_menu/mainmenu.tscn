@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://duqbu72374spv"]
+[gd_scene load_steps=7 format=3 uid="uid://duqbu72374spv"]
 
 [ext_resource type="Script" path="res://main_menu/mainmenu.gd" id="1_fhum4"]
 [ext_resource type="Texture2D" uid="uid://8yaenvrwijdu" path="res://main_menu/parallax/parallax_background_layer_6.png" id="2_im2yk"]
 [ext_resource type="FontFile" uid="uid://ctq858y4121s1" path="res://main_menu/font/monogram-extended.ttf" id="3_m3sys"]
 [ext_resource type="FontFile" uid="uid://cfpn3c8q2yehr" path="res://main_menu/font/monogram-extended-italic.ttf" id="4_pkdc4"]
+[ext_resource type="FontFile" uid="uid://bsn0le2jeaxtp" path="res://main_font/monogram-extended-italic.ttf" id="5_ptxup"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvuk5"]
 bg_color = Color(0.890196, 0.552941, 0.0980392, 1)
@@ -103,7 +104,7 @@ text = "Start"
 
 [node name="Tutorial" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_pkdc4")
+theme_override_fonts/font = ExtResource("5_ptxup")
 theme_override_font_sizes/font_size = 56
 text = "Tutorial"
 
