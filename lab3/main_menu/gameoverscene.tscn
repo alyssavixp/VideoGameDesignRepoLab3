@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvn5qew7hkodw"]
+
+[ext_resource type="FontFile" uid="uid://ctq858y4121s1" path="res://main_menu/font/monogram-extended.ttf" id="1_8aqp8"]
+[ext_resource type="Script" path="res://main_menu/gameoverscene.gd" id="1_efbuk"]
+[ext_resource type="FontFile" uid="uid://cfpn3c8q2yehr" path="res://main_menu/font/monogram-extended-italic.ttf" id="2_bdmnc"]
+[ext_resource type="FontFile" uid="uid://b45t3gjm8k203" path="res://main_menu/font/monogram.ttf" id="2_kuwci"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8ctq"]
+bg_color = Color(0.890196, 0.552941, 0.0980392, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 20
+expand_margin_left = 14.0
+expand_margin_top = 12.0
+expand_margin_right = 14.0
+expand_margin_bottom = 12.0
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Gameoverscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_efbuk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 690.0
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.0
+offset_top = -171.5
+offset_right = 203.0
+offset_bottom = 129.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_kuwci")
+theme_override_font_sizes/font_size = 200
+text = "Game Over"
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_8aqp8")
+theme_override_font_sizes/font_size = 84
+theme_override_styles/normal = SubResource("StyleBoxFlat_c8ctq")
+text = "2D Drive Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bdmnc")
+theme_override_font_sizes/font_size = 56
+text = "Start"
+
+[node name="Tutorial" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bdmnc")
+theme_override_font_sizes/font_size = 56
+text = "Tutorial"
+
+[node name="Exit" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bdmnc")
+theme_override_font_sizes/font_size = 56
+text = "End Game"

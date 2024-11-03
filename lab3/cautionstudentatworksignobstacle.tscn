@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://crcd4jaqb1yj5"]
+
+[ext_resource type="Texture2D" uid="uid://bb1h2b3h4cawl" path="res://cautionstudentsign.png" id="1_ag58k"]
+[ext_resource type="Script" path="res://cautionstudentatworksignobstacle.gd" id="1_lflww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcelw"]
+size = Vector2(58, 59)
+
+[node name="Cautionstudentatworksignobstacle" type="Node2D"]
+script = ExtResource("1_lflww")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(19, 8.5)
+shape = SubResource("RectangleShape2D_kcelw")
+
+[node name="Cautionstudentsign" type="Sprite2D" parent="Sprite2D/Area2D"]
+position = Vector2(19, 18)
+scale = Vector2(0.0705267, 0.0701807)
+texture = ExtResource("1_ag58k")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

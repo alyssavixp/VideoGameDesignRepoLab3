@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://mxnw55fykfjx"]
+[gd_scene load_steps=13 format=4 uid="uid://mxnw55fykfjx"]
 
 [ext_resource type="Script" path="res://main_game/level_1.gd" id="1_814jb"]
 [ext_resource type="PackedScene" uid="uid://dwak501xauj6g" path="res://main_game/parallax.tscn" id="2_cbnhb"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c28tcwqwuhrue" path="res://tilemaproad.png" id="4_m8pqk"]
 [ext_resource type="PackedScene" uid="uid://cnne0op3fde0b" path="res://obstacle.tscn" id="5_nei0e"]
 [ext_resource type="Texture2D" uid="uid://by23gu4qbyor6" path="res://finishline.jpg" id="7_vh6v8"]
+[ext_resource type="PackedScene" uid="uid://bf5664hrvnxsn" path="res://trafficlightobstacle.tscn" id="8_j760j"]
+[ext_resource type="PackedScene" uid="uid://crcd4jaqb1yj5" path="res://cautionstudentatworksignobstacle.tscn" id="9_t35t1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r5ytj"]
 distance = -30.0
@@ -333,16 +335,58 @@ tile_map_data = PackedByteArray("AAAPAA0AAAAEAAcAAAAQAA0AAAAFAAcAAAARAA0AAAAGAAc
 tile_set = SubResource("TileSet_vvtln")
 
 [node name="player1" parent="." instance=ExtResource("4_55enj")]
-position = Vector2(0, 659)
+position = Vector2(-2, 646)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 position = Vector2(948, -662)
 limit_smoothed = true
 
-[node name="Obstacle3" parent="." instance=ExtResource("5_nei0e")]
-position = Vector2(328, 276)
+[node name="trafficconeobstacle" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(470, 190)
 
 [node name="finishline" type="Sprite2D" parent="."]
 position = Vector2(5473, 215.25)
 scale = Vector2(0.140798, 0.134722)
 texture = ExtResource("7_vh6v8")
+
+[node name="Obstacle" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(1989, 191)
+
+[node name="Obstacle2" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(1432, 187)
+
+[node name="Obstacle5" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(2792, 195)
+
+[node name="Obstacle7" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(3717, 182)
+
+[node name="Obstacle8" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(4208, 178)
+
+[node name="Obstacle9" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(4888, 172)
+
+[node name="Obstacle11" parent="." instance=ExtResource("5_nei0e")]
+position = Vector2(5279, 176)
+
+[node name="Trafficlightobstacle" parent="." instance=ExtResource("8_j760j")]
+position = Vector2(798, 110)
+
+[node name="Trafficlightobstacle2" parent="." instance=ExtResource("8_j760j")]
+position = Vector2(1697, 81)
+
+[node name="Cautionstudentatworksignobstacle" parent="." instance=ExtResource("9_t35t1")]
+position = Vector2(1078, 99)
+
+[node name="Cautionstudentatworksignobstacle2" parent="." instance=ExtResource("9_t35t1")]
+position = Vector2(2439, 82)
+
+[node name="Trafficlightobstacle3" parent="." instance=ExtResource("8_j760j")]
+position = Vector2(3097, 95)
+
+[node name="Cautionstudentatworksignobstacle4" parent="." instance=ExtResource("9_t35t1")]
+position = Vector2(3382, 98)
+
+[node name="Trafficlightobstacle4" parent="." instance=ExtResource("8_j760j")]
+position = Vector2(4515, 60)
