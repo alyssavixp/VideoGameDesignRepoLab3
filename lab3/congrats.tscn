@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8ec2txbeb5ig"]
+
+[ext_resource type="Script" path="res://congrats.gd" id="1_1krbb"]
+[ext_resource type="FontFile" uid="uid://dlu2j6no44sdk" path="res://main_font/monogram-extended.ttf" id="1_8yd6f"]
+[ext_resource type="Texture2D" uid="uid://ckdjvl8wv2of7" path="res://turtorialfinishline.png" id="2_1ql3c"]
+
+[node name="Congrats" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1krbb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 1241.0
+offset_bottom = 778.0
+color = Color(0.999025, 1, 0.0710929, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 33.0
+offset_top = 42.0
+offset_right = 1051.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_8yd6f")
+theme_override_font_sizes/font_size = 59
+text = "Congratulations on completing the finish line!
+"
+
+[node name="start" type="Button" parent="Label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -470.0
+offset_top = 109.0
+offset_right = -170.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_8yd6f")
+theme_override_font_sizes/font_size = 56
+text = "Start Again"
+
+[node name="tutorial" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 242.0
+offset_right = 340.0
+offset_bottom = 315.0
+theme_override_fonts/font = ExtResource("1_8yd6f")
+theme_override_font_sizes/font_size = 56
+text = "Tutorial"
+
+[node name="exit" type="Button" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.084
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 350.0
+offset_right = 252.488
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("1_8yd6f")
+theme_override_font_sizes/font_size = 56
+text = "Exit Game"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Turtorialfinishline" type="Sprite2D" parent="."]
+position = Vector2(769, 343)
+scale = Vector2(0.877, 0.843)
+texture = ExtResource("2_1ql3c")
+
+[connection signal="pressed" from="Label/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Label/tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Label/exit" to="." method="_on_exit_pressed"]
